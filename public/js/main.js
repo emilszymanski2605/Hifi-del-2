@@ -85,7 +85,7 @@ function getParameterByName(name, url) {
    
                   if (id != 0 && name != '' && description != '' && !isNaN(price) && id > 0) {
                      document.querySelector('#productsFormError').innerHTML = "";
-                     let url = `http://localhost:1337/products/${id}`;
+                     let url = `http://188.226.173.203:3000/products/${id}`;
                      let headers = new Headers();
                      headers.append('Content-Type', 'application/json');
    
@@ -155,7 +155,7 @@ function getParameterByName(name, url) {
    
             if (name != '' && description != '' && !isNaN(price)) {
                document.querySelector('#productsFormError').innerHTML = "";
-               let url = `http://localhost:1337/products/`;
+               let url = `http://188.226.173.203:3000/products/`;
                let headers = new Headers();
                headers.append('Content-Type', 'application/json');
    
@@ -191,7 +191,7 @@ function getParameterByName(name, url) {
       }
    
       // hent alle produkter og udskriv listen
-      fetch('http://localhost:1337/products')
+      fetch('http://188.226.173.203:3000/products')
          .then((response) => {
             if (response.ok) {
                return response.json();
