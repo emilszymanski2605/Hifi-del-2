@@ -44,7 +44,7 @@ function getParameterByName(name, url) {
       if (getParameterByName('action') == "edit") {
          let productId = (getParameterByName('id') != null ? getParameterByName('id') : 0);
    
-         fetch(`http://localhost:1337/products/${productId}`)
+         fetch(`http://188.226.173.203:3000/products/${productId}`)
             .then((response) => {
                if (response.ok) {
                   return response.json();
