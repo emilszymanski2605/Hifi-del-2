@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>HI-FI</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+          <nav class="navbar navbar-default " role="navigation">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                  aria-controls="navbar">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                <a class="navbar-brand" href="index.html">Hi Fi</a>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="produkt.html">Produkter</a></li>
+                  <li><a href="Kontakt.html">Kontakt</a></li>
+                  <li><a href="admin.html">Admin</a></li>
+                  <li class="col-md-1 col-md-offset-3"><input class="søg" type="text" name="search" id="soge" placeholder="Søg..."></li>
+                </ul>
+              </div>
+              
+            </div>  
+          </nav>
+    </header>
+
+    <main>
+        <select id="selecttype">
+            <option value="0">Alle...</option>
+            <option value="1">CD Afspillere</option>
+            <option value="2">DVD Afspillere</option>
+            <option value="3">Effektforstærkere</option>
+            <option value="4">Forforstærkere</option>
+            <option value="5">Højtalere</option>
+            <option value="6">Int. Forstærkere</option>
+            <option value="7">Pladespillere</option>
+            <option value="8">Rørforstærkere</option>
+    </select>
+            <div id="content"></div>
+    <div id="vare"> </div>
+
+    </main>
+
+    <footer class="col-md-12">
+      <div>
+        <h4>Kontakt os</h4>
+        <p>26052605</p>
+        <p>hifi@klubben.dk</p>
+      </div>
+    </footer>
+    </div>
+    <script src="/js/produkt.js"></script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- <script>
+fetch('http://localhost:1337/produkt')
+    .then((response) => {
+        // grib svarets indhold (body) og send det som et json objekt til næste .then()
+        return response.json();
+    })
+    .then((data) => {
+        // nu er json objektet lagt ind i data variablen, udskriv data
+        console.log(data);
+        data.forEach(function(element) {
+            document.getElementById("vare").innerHTML += '<div class="col12"><div class="col4"><h2>'+ element.navn +'</h2><div><img src="images/'+ element.billede +'"></div><p>Pris: '+ element.pris +'</p><p>Kategori: '+ element.fk_kategori_id +'</p><p><a href="produkt/'+ element.ID +'">Læs mere</a><br><br><br></p></div></div><hr>'
+        });
+        
+    })
+</script> -->
+</html>
