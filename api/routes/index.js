@@ -126,7 +126,7 @@ app.post('/kontakt', (req, res) => {
              console.log(Date(), err);
              res.status(500);
           } else {
-          res.writeHead(302, {'Location': 'http://Localhost:3000/index.html'});
+          res.writeHead(302, {'Location': 'http://188.226.173.203:3000/index.html'});
             res.end();
           }
        });
