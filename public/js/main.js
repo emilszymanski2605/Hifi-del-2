@@ -1,4 +1,3 @@
-// https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 function getParameterByName(name, url) {
       if (!url) url = window.location.href;
       name = name.replace(/[\[\]]/g, "\\$&");
@@ -9,7 +8,6 @@ function getParameterByName(name, url) {
       return decodeURIComponent(results[2].replace(/\+/g, " "));
    }
    
-   // slet funktionen, bindes til hver slet knap efter alle produkterne er hentet
    function sletItem(event) {
       if (confirm('Er du sikker?')) {
          let id = (isNaN(event.target.dataset['id']) ? 0 : event.target.dataset['id']);
@@ -23,7 +21,7 @@ function getParameterByName(name, url) {
             mode: 'cors',
             cache: 'default'
          };
-         let request = new Request(`http://188.226.173.203:3000/products/${id}`, init);
+         let request = new Request(`http://188.226.187.169:3000/products/${id}`, init);
    
          fetch(request)
             .then(response => {

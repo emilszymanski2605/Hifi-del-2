@@ -110,15 +110,6 @@ module.exports = (app) => {
 
 
 
-
-
-   // ========================== static
-//    app.get('/.*', restify.plugins.serveStatic({
-//       'directory': 'public',
-//       'default': 'index.html'
-//    }));
-
-
 app.post('/kontakt', (req, res) => {
     if (req.body.fname != undefined && req.body.lname != undefined && req.body.email != undefined && req.body.besked != undefined) {
        service.kontakt(req.body.fname, req.body.lname, req.body.email, req.body.besked, (err, result) => {
@@ -126,7 +117,7 @@ app.post('/kontakt', (req, res) => {
              console.log(Date(), err);
              res.status(500);
           } else {
-          res.writeHead(302, {'Location': 'http://Localhost:3000/index.html'});
+          res.writeHead(302, {'Location': 'http://188.226.187.169:3000/index.html'});
             res.end();
           }
        });
