@@ -117,7 +117,11 @@ app.post('/kontakt', (req, res) => {
              console.log(Date(), err);
              res.status(500);
           } else {
+<<<<<<< HEAD
           res.writeHead(302, {'Location': 'http://188.226.187.169:3000/index.html'});
+=======
+          res.writeHead(302, {'Location': 'http://188.226.173.203:3000/index.html'});
+>>>>>>> 0e8652121d49d7be574c88f95b3eee50579576dd
             res.end();
           }
        });
